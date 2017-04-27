@@ -1,0 +1,32 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td#name {
+    width: 500px;
+    border: 1px solid black;
+}
+
+td.url {
+    width: 350px;
+    border: 1px solid black;
+}
+
+td#id  {
+    width: 100px;
+    border: 1px solid black;
+}
+
+td#company  {
+    width: 500px;
+    border: 1px solid black;
+}
+
+ul li {
+    display: inline;
+}

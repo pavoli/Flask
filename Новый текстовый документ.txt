@@ -1,0 +1,97 @@
+superjob.ru
+
+api - http://api.superjob.ru/
+
+1.список работодателей
+http://www.superjob.ru/clients/?ruf=1&town=14&no_vac=off&page=1 (всего 62 страницы)
+http://www.superjob.ru/clients/?ruf=1&town=14&no_vac=off&page=62
+
+2.название компании
+<table cellspacing="0" class="w100">
+<td class="searchres_leftcol">
+<div class="searchres_comp">
+<a href="http://www.superjob.ru/clients/gorodskaya-poliklinika-6-945881.html?town=14" class="medium"> ГОРОДСКАЯ ПОЛИКЛИНИКА №6</a>
+
+описание деятельности компании: сайт, описание, название
+<script type="text/javascript">
+App = new CompanyPageAppSingleton;
+defaults: company_name, company_desc, url
+
+
+3.список вакансий компании
+http://www.superjob.ru/clients/gorodskaya-poliklinika-6-945881.html?town=14
+
+если несколько вакансий, присутствует div
+<div class="pager">
+
+кол-во страниц проставлено в div
+<div class="navnums">
+
+4.описание вакансии на лицевой странице
+<div class="overflow_inner">
+  <a class="vaclink" href="/rabota/vacancy-12246764.html" title="Врач-терапевт участковый" target="_blank">
+    Врач-терапевт участковый
+  </a>
+</div>
+
+5.детальное описание вакансии
+относительный путь - /rabota/vacancy-12246764.html (http://www.superjob.ru/rabota/vacancy-12246764.html)
+абсолютный - http://www.superjob.ru/rabota/vacancy-vrach-terapevt-uchastkovyj-12246764-141104.html
+
+<div class="VacancyView_details">
+<div class="VacancyDetails_section">
+<div class="VacancyDetails_title">
+<div class="VacancyDetails_item">
+
+
+
+
+
+rabota.ru
+
+1.список работодателей
+
+1 страница
+http://spb.rabota.ru/v3_searchVacancyByCompanyResults.html?wt=f&c=2&pp=20&ov=1&start=10 (всего 160 страниц)
+
+2 страница
+http://spb.rabota.ru/v3_searchVacancyByCompanyResults.html?wt=f&c=2&pp=20&ov=1&start=30
+3 страница
+http://spb.rabota.ru/v3_searchVacancyByCompanyResults.html?wt=f&c=2&pp=20&ov=1&start=50
+
+и далее шаг=20
+
+http://spb.rabota.ru/v3_searchVacancyByCompanyResults.html?wt=f&c=2&pp=20&ov=1&start=3180
+
+2.название компании
+<div class="b-center__box">
+  <div class="h-box-wrapper">
+    <div class="h-box-wrapper__leftcol">
+      <a href="http://spb.rabota.ru/company/1-otr/" class="box-wrapper__resume-name">&quot;1 ОТР&quot;, ООО</a>
+
+
+3.описание деятельности компании: сайт, описание, название
+
+описание компании
+<div class="mt_10 text_14">
+
+сайт
+<div class="phoneNum" style="display: none">
+<noindex><a rel="nofollow" class="text-green" target="_blank" href="http://www.action.ru">http://www.action.ru</a></noindex>
+
+
+4.список вакансий компании
+http://spb.rabota.ru/company/action/
+
+если добавить эту строку в конец ссылки, то будет постраничный поиск
+?c=2&sm=105&d=d&pp=10&fv=f&start=0#offerList
+
+http://spb.rabota.ru/company/action/?c=2&sm=105&d=d&pp=10&fv=f&start=10#offerList
+http://spb.rabota.ru/company/action/?c=2&sm=105&d=d&pp=10&fv=f&start=20#offerList
+
+<div class="h-box-wrapper__leftcol">
+<a target="_blank" href="http://spb.rabota.ru/vacancy34435551.html?vac_page=view" class="box-wrapper__resume-name">Грузчик</a>
+
+5.детальное описание вакансии
+http://spb.rabota.ru/vacancy34435551.html?vac_page=view
+<div class="list_kval pd_h">

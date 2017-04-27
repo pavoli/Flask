@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if vacancies %}
+<h1 xmlns="http://www.w3.org/1999/html">Vacancy List</h1>
+<form action="" method="post" name="search_vacancy">
+    {{ form.hidden_tag() }}
+    <p>
+        What are you searching:
+        {{ form.search }}
+        {{ form.submit }}
+    </p>
+    <table >
+        <th>Компания</th>
+        <th>Вакансия</th>
+        <th>Id Компании</th>
+        {% for vacancy in vacancies %}
+            <tr>
+                <td class="url"><a href="{{ vacancy.web_site }}"> {{ vacancy.name }} </a></td>
+                <td id="name"><a href="{{ vacancy.url }}"> {{ vacancy.job_title }} </a></td>
+                <td id="id">{{ vacancy.id_company }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</form>
+{% endif %}
+{% endblock %}

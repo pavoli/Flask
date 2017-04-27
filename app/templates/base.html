@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Parser</title>
+    {% endif %}
+    <div class="container">
+        <h1 class="logo">Flask App</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('get_company') }}">Company</a></li>
+                <li><a href="{{ url_for('get_vacancy') }}">Vacancy</a></li>
+            </ul>
+        </nav>
+    </div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>   
+  </body>
+</html>

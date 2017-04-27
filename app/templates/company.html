@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 xmlns="http://www.w3.org/1999/html">Company List</h2>
+<form action="" method="post" name="search_company">
+    <table>
+        <th>Компания</th>
+        {% for company in companies.items %}
+            <tr>
+                <td class="url"><a href="{{ company.web_site }}"> {{ company.name }} </a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</form>
+{% if companies.has_prev %}<a href="{{ url_for('get_company', page = companies.prev_num) }}"><<< </a>{% else %}<<< {% endif %} |
+{% if companies.has_next %}<a href="{{ url_for('get_company', page = companies.next_num) }}"> >>></a>{% else %} >>>{% endif %}
+{% endblock %}

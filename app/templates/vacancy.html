@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if vacancies %}
+<h1 xmlns="http://www.w3.org/1999/html">Vacancy List</h1>
+<form action="" method="post" name="search_vacancy">
+    {{ form.hidden_tag() }}
+    <p>
+        What are you searching:
+        {{ form.search }}
+        {{ form.submit }}
+    </p>
+    <table >
+        <th>Компания</th>
+        <th>Вакансия</th>
+        <th>Id Компании</th>
+        <th>Id Вакансии</th>
+        {% for vacancy in vacancies %}
+            <tr>
+                <td class="url"><a href="{{ vacancy.web_site }}"> {{ vacancy.name }} </a></td>
+                <td id="name"><a href="{{ vacancy.url }}"> {{ vacancy.job_title }} </a></td>
+                <td class="id">{{ vacancy.id_company }}</td>
+                <td class="id">{{ vacancy.id }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <!--
+    <div class="pager">
+        {% if vacancies.has_prev %}<a href="{{ url_for('get_vacancy', page = vacancies.prev_num) }}"><<<  </a>{% else %}<<< {% endif %} |
+        {% if vacancies.has_next %}<a href="{{ url_for('get_vacancy', page = vacancies.next_num) }}">  >>></a>{% else %} >>>{% endif %}
+    </div>
+    -->
+</form>
+{% endif %}
+{% endblock %}

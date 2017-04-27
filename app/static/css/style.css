@@ -1,0 +1,41 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 800px;
+    height: 300px;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td#name {
+    width: 500px;
+    border: 1px solid black;
+}
+
+td.url {
+    width: 350px;
+    border: 1px solid black;
+}
+
+td.id  {
+    width: 100px;
+    border: 1px solid black;
+}
+
+td#company  {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.pager {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+ul li {
+    display: inline;
+}
