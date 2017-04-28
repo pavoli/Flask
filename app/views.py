@@ -51,7 +51,7 @@ def get_company(page=1):
 @app.route('/vacancy/<int:page>', methods=['GET', 'POST'])
 def get_vacancy(page=1):
     form = FindVacancy()
-    if form.submit:
+    if not form.search.data is None:
         vacancies = db.session.query(Vacancy.id, Vacancy.url, Vacancy.job_title, Vacancy.id_company, Company.name, Company.web_site).\
             join(Company).\
             filter(Vacancy.info.like('%' + form.search.data + '%')).\
