@@ -23,7 +23,8 @@ OPENID_PROVIDERS = [
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:////' + os.path.join(basedir, 'hh_spb.db')
+#SQLALCHEMY_DATABASE_URI = 'sqlite:////' + os.path.join(basedir, 'hh_spb.db') # mac os x
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'hh_spb.db') # win version
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
 # mail server settings
