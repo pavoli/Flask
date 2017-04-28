@@ -51,7 +51,7 @@ def get_company(page=1):
 @app.route('/vacancy/<int:page>', methods=['GET', 'POST'])
 def get_vacancy(page=1):
     form = FindVacancy()
-    if form.validate_on_submit():
+    if form.submit:
         vacancies = db.session.query(Vacancy.id, Vacancy.url, Vacancy.job_title, Vacancy.id_company, Company.name, Company.web_site).\
             join(Company).\
             filter(Vacancy.info.like('%' + form.search.data + '%')).\
@@ -64,6 +64,11 @@ def get_vacancy(page=1):
             order_by(Company.name).\
             all()
         return render_template('vacancy.html', title='Vacancy', vacancies=vacancies, form=form)
+    #vacancies = db.session.query(Vacancy.id, Vacancy.url, Vacancy.job_title, Vacancy.id_company, Company.name, Company.web_site).\
+    #        join(Company).\
+    #        order_by(Company.name).\
+    #        all()
+    #return render_template('vacancy.html', title='Vacancy', vacancies=vacancies, form=form)
 
 
 """
