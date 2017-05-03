@@ -47,3 +47,14 @@ class Vacancy(db.Model):
 
     def __repr__(self):
         return 'Vacancy %r' % self.job_title
+
+
+class Picture(db.Model):
+    __tablename__ = 'Picture'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Integer, index=True)
+
+    def __init__(self, id_picture, name):
+        self.id = id_picture
+        self.name = name
