@@ -3,8 +3,9 @@
 {% block content %}
 <h2 xmlns="http://www.w3.org/1999/html">Picture List</h2>
 <form action="" method="post" name="get_picture">
-    <table>
-        <th>Картинки</th>
-    </table>
+    <p>
+        {{ form.upload }}
+        {{ form.save }}
+    </p>
 </form>
 {% endblock %}
