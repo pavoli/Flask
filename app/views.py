@@ -8,8 +8,8 @@ __author__ = 'polly'
 from flask import render_template, flash, redirect, session, url_for, request
 from app import app, db
 from models import Company, Vacancy
-from config import VACANCY_PER_PAGE, COMPANY_PER_PAGE
-from forms import FindVacancy
+from config import VACANCY_PER_PAGE, COMPANY_PER_PAGE, PICTURE_PER_PAGE
+from forms import FindVacancy, PictureList
 
 """
 @lm.user_loader
@@ -70,6 +70,14 @@ def get_vacancy(page=1):
     #        all()
     #return render_template('vacancy.html', title='Vacancy', vacancies=vacancies, form=form)
 
+
+@app.route('/picture', methods=['GET', 'POST'])
+@app.route('/picture/', methods=['GET', 'POST'])
+@app.route('/picture/<int:page>', methods=['GET', 'POST'])
+def get_picture(page=1):
+    form = PictureList()
+    #companies = Company.query.paginate(page, PICTURE_PER_PAGE, False)
+    return render_template('picture.html', title='Picture')
 
 """
 @app.route('/logout')
