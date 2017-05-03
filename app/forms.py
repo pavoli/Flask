@@ -31,3 +31,4 @@ class FindVacancy(Form):
 
 class PictureList(Form):
     upload = FileField('...')
+    save = SubmitField('Save')

@@ -76,8 +76,7 @@ def get_vacancy(page=1):
 @app.route('/picture/<int:page>', methods=['GET', 'POST'])
 def get_picture(page=1):
     form = PictureList()
-    #companies = Company.query.paginate(page, PICTURE_PER_PAGE, False)
-    return render_template('picture.html', title='Picture')
+    return render_template('picture.html', title='Picture', form=form)
 
 """
 @app.route('/logout')
