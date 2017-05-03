@@ -39,3 +39,4 @@ ADMINS = ['p.olifer@bk.ru']
 #pagination
 VACANCY_PER_PAGE = 25
 COMPANY_PER_PAGE = 30
+PICTURE_PER_PAGE = 10
