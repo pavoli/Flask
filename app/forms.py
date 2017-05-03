@@ -6,7 +6,7 @@ __author__ = 'polly'
 '''
 
 from flask_wtf import Form
-from wtforms import TextField, BooleanField, TextAreaField, SubmitField, StringField
+from wtforms import TextField, BooleanField, TextAreaField, SubmitField, StringField, FileField
 from wtforms.validators import DataRequired, Length
 
 
@@ -27,3 +27,7 @@ class EditForm(Form):
 class FindVacancy(Form):
     search = StringField('search')
     submit = SubmitField('Find...')
+
+
+class PictureList(Form):
+    upload = FileField('...')
