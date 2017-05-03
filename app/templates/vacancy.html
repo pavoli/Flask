@@ -23,12 +23,10 @@
             </tr>
         {% endfor %}
     </table>
-    <!--
     <div class="pager">
         {% if vacancies.has_prev %}<a href="{{ url_for('get_vacancy', page = vacancies.prev_num) }}"><<<  </a>{% else %}<<< {% endif %} |
         {% if vacancies.has_next %}<a href="{{ url_for('get_vacancy', page = vacancies.next_num) }}">  >>></a>{% else %} >>>{% endif %}
     </div>
-    -->
 </form>
 {% endif %}
 {% endblock %}

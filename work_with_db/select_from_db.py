@@ -37,6 +37,9 @@ def get_vacancy_info(id_vacancy=11863819):
         print answer.spec_name
 
 
+def get_picture(id_picture=1632763):
+    pass
+
 if __name__ == '__main__':
     #get_company()
     #get_vacancy()
